@@ -1,0 +1,33 @@
+body{
+    color: #F0D9E7;
+    padding-left: 5px;
+    background: url('https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg?size=626&ext=jpg');
+}
+.card{
+    width: 80%;
+    height: 80%;
+    padding-left: 20px;
+    border:5px solid #A239EA;  
+    border-radius: 20px; 
+    background: #5C33F6;
+    box-shadow:5px 5px 5px #a84b7b;
+}
+@media screen and (min-width:900px){
+    .card{
+        width: 40%;
+        height:85%;
+        position: absolute;
+        left: 30%;
+
+    }
+}
+h2{
+    border-bottom: 2px solid black;
+    /* margin-right: 5px; */
+    width:60%;
+    padding-bottom: 5px;
+}
+
+
+
+/* F0D9E7,FF94CC,A239EA,5C33F6 */
