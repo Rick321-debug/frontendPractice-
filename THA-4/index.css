@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.red{
+    width: 500px;
+    height: 500px;
+    background: red;
+    border-radius: 50%;
+    border: 5px solid grey;
+}
+.white{
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: white;
+    position:absolute;
+    top: 50px;
+    left: 19%;
+}
+.stick1{
+    width: 3px;
+    height: 200px;
+    background: black;
+    position: absolute;
+    top: 30%;
+    left:20%;
+}
+.stick1{
+    width: 3px;
+    height: 200px;
+    background: black;
+    position: absolute;
+    top: 30%;
+    left:20%;
+}
+.stick2{
+    width: 3px;
+    height: 200px;
+    background: black;
+    position: absolute;
+    top: 30%;
+    left:30%;
+}
+.stick3{
+    width: 3px;
+    height: 200px;
+    background: black;
+    position: absolute;
+    top: 30%;
+    left:40%;
+}
