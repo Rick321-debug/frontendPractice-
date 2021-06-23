@@ -7,47 +7,67 @@ body{
     width: 500px;
     height: 500px;
     background: red;
+    display: flex;
     border-radius: 50%;
-    border: 5px solid grey;
+    border:5px solid lightgray;
+    justify-content: center;
+    align-items: center;
 }
 .white{
     width: 420px;
     height: 420px;
     border-radius: 50%;
     background: white;
-    position:absolute;
-    top: 50px;
-    left: 19%;
+    box-shadow: inset 0px 0px 14px 0 black;
+    border: 3px solid white;
+
 }
-.stick1{
-    width: 3px;
-    height: 200px;
-    background: black;
-    position: absolute;
-    top: 30%;
-    left:20%;
+.middle{
+    background: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    top: 47%;
+    left: 46%;
+    z-index: 5;
 }
-.stick1{
+
+/* .stick1,.stick2,.stick3{
+    transform: rotate(90deg);
     width: 3px;
-    height: 200px;
-    background: black;
-    position: absolute;
+
+
+    position: relative;
+
+} */
+.stick1{
+    background: rgb(216, 16, 139);
+    z-index: 2;
+    height: 190px;
+    width: 3px;
     top: 30%;
-    left:20%;
+    position: absolute;
+    left:30%;
+    animation: hands 60s infinite steps(60);
+    transform-origin: center right;
 }
 .stick2{
-    width: 3px;
-    height: 200px;
-    background: black;
-    position: absolute;
-    top: 30%;
-    left:30%;
+
+    background: rgb(10, 174, 196);
+    height: 8em;
+    top: -18px;
+    left: 34%;
 }
 .stick3{
-    width: 3px;
-    height: 200px;
-    background: black;
-    position: absolute;
-    top: 30%;
-    left:40%;
+
+    background: rgb(196, 226, 25);
+    height: 6em;
+    top: -130px;
+    left:37.8%;
+}
+@keyframes hands {
+    100% {
+        transform: rotate(360deg);
+    }
 }
