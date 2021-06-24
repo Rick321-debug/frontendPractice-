@@ -1,73 +1,90 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.red{
-    width: 500px;
-    height: 500px;
-    background: red;
-    display: flex;
-    border-radius: 50%;
-    border:5px solid lightgray;
-    justify-content: center;
-    align-items: center;
+.red {
+  width: 500px;
+  height: 500px;
+  background: red;
+  display: flex;
+  border-radius: 50%;
+  border: 5px solid lightgray;
+  justify-content: center;
+  align-items: center;
 }
-.white{
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: white;
-    box-shadow: inset 0px 0px 14px 0 black;
-    border: 3px solid white;
-
+.white {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset 0px 0px 14px 0 black;
+  border: 3px solid white;
 }
-.middle{
-    background: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: relative;
-    top: 47%;
-    left: 46%;
-    z-index: 5;
+.middle {
+  background: lime;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  left: 47%;
+  z-index: 5;
 }
 
-/* .stick1,.stick2,.stick3{
-    transform: rotate(90deg);
-    width: 3px;
 
-
-    position: relative;
-
-} */
-.stick1{
-    background: rgb(216, 16, 139);
-    z-index: 2;
-    height: 190px;
-    width: 3px;
-    top: 30%;
-    position: absolute;
-    left:30%;
-    animation: hands 60s infinite steps(60);
-    transform-origin: center right;
+.stick1 {
+  height: 3px;
+  width: 40%;
+  position: relative;
+  top: 48.5%;
+  left: 7.5%;
+  z-index: 2;
+  background-color: blue;
+  border-radius: 2px;
+  transform-origin: center right;
+  animation: sec 60s infinite steps(60);
 }
 .stick2{
 
     background: rgb(10, 174, 196);
-    height: 8em;
-    top: -18px;
-    left: 34%;
+    height: 3px;
+    width: 30%;
+    position: relative;
+    top: 47.8%;
+    left: 17%;
+ 
+    z-index: 1;
+    border-radius: 2px;
+    transform-origin: center right;
+    animation: min 3600s infinite steps(60);
 }
 .stick3{
 
     background: rgb(196, 226, 25);
-    height: 6em;
-    top: -130px;
-    left:37.8%;
+    height: 3px;
+    width: 20%;
+    position: relative;
+    top: 47%;
+    left: 27%;
+    z-index: 0;
+    border-radius: 2px;
+    transform-origin: center right;
+    animation: hour 43200s infinite steps(60);
 }
-@keyframes hands {
-    100% {
-        transform: rotate(360deg);
-    }
+
+@keyframes sec {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes min {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hour {
+  100% {
+    transform: rotate(360deg);
+  }
 }
