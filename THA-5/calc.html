@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calc.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id='calc'>
+        <input type="text" id="top" class="screen" disabled>
+        <input type="text" id="bottom" class="screen" disabled>
+        <br>
+        <button id="k1">AC</button>
+        <button id="k2">DEL</button>
+        <button id="k3">/</button>
+        <button id="k4">1</button>
+        <button id="k5">2</button>
+        <button id="k6">3</button>
+        <button id="k7">*</button>
+        <button id="k8">4</button>
+        <button id="k9">5</button>
+        <button id="k10">6</button>
+        <button id="k11">+</button>
+        <button id="k12">7</button>
+        <button id="k13">8</button>
+        <button id="k14" onclick='result(this)'>9</button>
+        <button id="k15" onclick='result()'>-</button>
+        <button id="k16" onclick='result()'>.</button>
+        <button id="k17" onclick='result()'>0</button>
+        <button id="k18" onclick='result()'>=</button>
+    </div>
+
+<script>
+    var screen = document.getElementById('bottom')
+    function result(e){
+        var no = e
+        console.log(screen)
+        screen.value = screen.value + no.value
+    }
+</script>
+</body>
+</html>
