@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    width: 100vw;
+
+}
+.white{
+    background: white;
+}
+.wrapper{
+    border: 2px solid rgb(236, 91, 91);
+    width: 330px;
+    height: 330px;
+    margin: 10em auto;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+
+}
+div{
+    cursor: pointer;
+    background: red;
+    border: 1px solid rgb(235, 80, 80);
+}
+div:hover{
+    background: rgba(255, 247, 247, 0.432);
+}
+#k18{
+    background: white;
+}

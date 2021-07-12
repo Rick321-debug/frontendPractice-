@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="score">
+    <div class="count">0</div>
+    <div class="remaing">36</div>
+</div>
+<div id="parent">
+
+</div>
+    <script>
+        // var add = {
+        //     num1:2,
+        //     num2:3,
+ 
+        //     plus: function add(ope){
+        //         if(ope == '+'){
+        //             console.log(this.num1+this.num2)
+        //         }
+        //         else if(ope == '-'){
+        //             console.log(this.num1-this.num2)
+        //         }else{
+        //             console.log('wrong')
+        //         }
+        //     }
+        // }
+        // var sub = {
+        //     num1:5,
+        //     num2:2
+        // }
+        // var calc = add.plus.bind(sub , '-')
+        // calc()
+        // add.plus.call(sub , '-')
+        // add.plus.apply(sub , ['-'])
+var parentDiv = document.querySelector('#parent')
+for(var i=0;i<36;i++){
+    let a = document.createElement('div')
+    a.classList.add('block')
+    parentDiv.appendChild(a)
+}
+var div = document.querySelectorAll('#parent > div')
+var countDiv = document.querySelector('.count')
+var remain = document.querySelector('.remaing')
+var score = 0;
+// var coloured = document.querySelectorAll('')
+div.forEach(element => {
+    element.addEventListener('click', () => {
+        if(element.classList.contains('black')){
+            element.classList.remove('black')
+            score -= 1
+            
+        }
+        else{
+            element.classList.add('black')
+            score += 1
+            // element.classList.remove('black')
+        }
+        countDiv.innerHTML = score
+        remain.innerHTML = 36 - score
+        
+    })
+});
+
+
+
+</script>
+</body>
+</html>
