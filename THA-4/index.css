@@ -17,8 +17,8 @@ body {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: white;
-  box-shadow: inset 0px 0px 14px 0 black;
+  background: #3b3b3b;
+  box-shadow: inset 0px 0px 14px 0 rgb(0, 0, 0);
   border: 3px solid white;
 }
 .middle {
@@ -37,7 +37,7 @@ body {
   height: 3px;
   width: 40%;
   position: relative;
-  top: 48.5%;
+  top: 48.3%;
   left: 7.5%;
   z-index: 2;
   background-color: blue;
@@ -51,7 +51,7 @@ body {
     height: 3px;
     width: 30%;
     position: relative;
-    top: 47.8%;
+    top: 47.7%;
     left: 17%;
  
     z-index: 1;
@@ -87,4 +87,25 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+#twelve,#three,#six,#nine{
+  position: absolute;
+  font-size: x-large;
+ 
+}
+#twelve{
+  top: 6%;
+  left: 47%;
+}
+#three{
+  top: 35.2%;
+  left: 78%;
+}
+#six{
+  top: 67%;
+  left: 49%;
+}
+#nine{
+  top: 35.5%;
+  left: 20%;
 }
