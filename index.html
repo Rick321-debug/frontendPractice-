@@ -3,62 +3,39 @@
 <head>
     <style>
         body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
+            background-color: #252323;
         }
-        div{
-            background-color: rgb(237, 100, 241);
-            border: 3px solid rgb(98, 9, 240);
-            padding: 5px;
-            border-radius: 10px;
-            width: 40%;
-
+        #wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
         }
-        li{
-            margin-bottom: 5px;
+        .Tha{
+            width: 300px;
+            height: 400px;
+            background-color: red;
+           
         }
         a{
-            color:black;
+            color: black;
+            text-align: center;
+        }
+        img{
+            width: 99%;
+            height: 85%;
+            border: 2px solid black;
         }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend assisments
-    </title>
+    <title>My THA's</title>
 </head>
 <body>
-    <div>
-        <h2>Frontend assisments</h2>
-            <hr>
-            <ul>
-                <li>
-                    <a href="THA-1/Solution/index.html">THA-1</a>
-                </li>
-                <li>
-                    <a href="THA-2">THA-2</a>
-                </li>
-
-                <li>
-                    <a href="THA-3">THA-3</a>
-                </li>
-
-                <li>
-                    <a href="THA-4">THA-4</a>
-                </li>
-
-                <li>
-                    <a href="THA-5">THA-5</a>
-                </li>
-                <li>
-                    <a href="THA-8">THA-8</a>
-                </li>
-                <li>
-                    <a href="THA-9">THA-9</a>
-                </li>
-            </ul>
+    <div id="wrapper">
+        <div class="Tha">
+            <img src="images/tha.png" alt="">
+            <a href="THA-1/Solution"><h4>Sample Leter</h4></a>
+        </div>
     </div>
 </body>
 </html>

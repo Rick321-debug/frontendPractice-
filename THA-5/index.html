@@ -14,23 +14,23 @@
         <input type="text" id="top" class="screen" disabled>
         <input type="text" id="bottom" class="screen" disabled>
 
-        <button id="k1" onclick="clear()">AC</button>
+        <button id="k1" onclick="erase()">AC</button>
         <button id="k2" onclick="del()">DEL</button>
         <button id="k3" onclick="upScreen(this)">/</button>
         <button id="k4" onclick='result(this)'>1</button>
         <button id="k5" onclick='result(this)'>2</button>
         <button id="k6" onclick='result(this)'>3</button>
         <button id="k7" onclick="upScreen(this)">*</button>
-        <button id="k8">4</button>
-        <button id="k9">5</button>
-        <button id="k10">6</button>
+        <button id="k8" onclick='result(this)'>4</button>
+        <button id="k9" onclick='result(this)'>5</button>
+        <button id="k10" onclick='result(this)'>6</button>
         <button id="k11" onclick="upScreen(this)">+</button>
-        <button id="k12">7</button>
+        <button id="k12" onclick='result(this)'>7</button>
         <button id="k13" onclick='result(this)'>8</button>
         <button id="k14" onclick='result(this)'>9</button>
         <button id="k15" onclick="upScreen(this)">-</button>
         <button id="k16" onclick='result(this)'>.</button>
-        <button id="k17" onclick='result()'>0</button>
+        <button id="k17" onclick='result(this)'>0</button>
         <button id="k18" onclick='add()'>=</button>
     </div>
 
@@ -53,9 +53,10 @@
             screen.value = eval(up.value + screen.value)
             up.value = ''
         }
-        function clear(){
+        function erase(){
             
             screen.value = ''
+            console.log('hello')
         }
         function del(){
             screen.value = screen.value.slice(0,-1)

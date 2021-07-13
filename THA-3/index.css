@@ -3,19 +3,26 @@
     height: 50px;
     background: white;
     position: absolute;
-    left: 35%;
-    top: 20px;
+    z-index: 1;
+    left: 40%;
+    top: 2px;
     color: blue;
     text-align: center;
 }
 .card{
-    width:90%;
-    height:100%;
+    width:500px;
+    /* background: chartreuse; */
+    height:80%;
     padding: 20px;
     font-size: 13px;
+    z-index: 0;
     border: 3px solid blue; 
     margin-top: 5%;
+    top: 5%;
     display: grid;
+    position: absolute;
+    left: 30%;
+    margin: auto;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
 
@@ -26,4 +33,18 @@
 }
 ul{
     padding-left: 15px;
+}
+@media screen and (max-width:900px){
+    .card{
+        width: 450px;
+        height: 80%;
+        left: 20%;
+        top: 5%;
+
+    }
+    .title{
+
+        left: 45%;
+        top: 5px;
+    }
 }

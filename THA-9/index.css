@@ -1,14 +1,16 @@
 body{
     width: 90vw;
-    height: 90vh;
+    height: 100vh;
+    background: linear-gradient(60deg,red,yellow,blue);
 }
 #parent{
     /* background: red; */
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 80%;
     border: 3px solid red;
     border-radius: 5px;
     display: grid;
+    margin: auto;
     grid-template-columns: repeat(6 , 1fr); 
     /* justify-content: space-around; */
     /* align-items: stretch; */
