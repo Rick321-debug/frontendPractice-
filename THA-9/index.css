@@ -4,7 +4,7 @@ body{
     background: linear-gradient(60deg,red,yellow,blue);
 }
 #parent{
-    /* background: red; */
+    background: rgb(196, 82, 82);
     width: 500px;
     height: 80%;
     border: 3px solid red;
@@ -18,28 +18,39 @@ body{
 }
 .block{
     /* width: 50px;
-    height: 50px; */
-    background: red;
-    border: 5px solid white;
+    height: 50px;  */
+    margin: 10px;
+    border-radius: 5px;
+    background: rgb(134, 53, 53);
+    border: 2px solid white;
 }
 .black{
-    border: 5px solid black;
-    background: green;
+    background: rgb(63, 219, 63);
 }
 .count{
     background: white;
     width:150px;
     height: 30px;
     text-align: center;
+    font-size: xx-large;
     position: relative;
     left: 400px;
 }
+h1{
+    font-family: "Audiowide", sans-serif;
+    width: 800px;
+    height: 40px;
+    position: relative;
+    left: 300px;
+    color: red;
+}
 .remaing{
     background: white;
+    font-size: xx-large;
     width: 150px;
     height: 30px;
     position: absolute;
-    left: 700px;
+    left: 680px;
     top: 8px;
     text-align: center;  
 }
@@ -49,6 +60,11 @@ body{
     }
     .remaing{
         top:8px;
-        left: 400px;
+        left: 360px;
+    }
+    h1{
+        left:10px;
+        color: black;
+        
     }
 }
