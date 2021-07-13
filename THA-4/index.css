@@ -88,24 +88,3 @@ body {
     transform: rotate(360deg);
   }
 }
-#twelve,#three,#six,#nine{
-  position: absolute;
-  font-size: x-large;
- 
-}
-#twelve{
-  top: 6%;
-  left: 47%;
-}
-#three{
-  top: 35.2%;
-  left: 78%;
-}
-#six{
-  top: 67%;
-  left: 49%;
-}
-#nine{
-  top: 35.5%;
-  left: 20%;
-}

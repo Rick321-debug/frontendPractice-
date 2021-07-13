@@ -27,17 +27,28 @@ body{
     background: green;
 }
 .count{
-    background: yellow;
-    width: 70px;
+    background: white;
+    width:150px;
     height: 30px;
     text-align: center;
+    position: relative;
+    left: 400px;
 }
 .remaing{
-    background: yellow;
-    width: 70px;
+    background: white;
+    width: 150px;
     height: 30px;
     position: absolute;
-    left: 70%;
-    top: 10px;
-    text-align: center;    
+    left: 700px;
+    top: 8px;
+    text-align: center;  
+}
+@media screen and (max-width:900px) {
+    .count{
+        left: 100px;
+    }
+    .remaing{
+        top:8px;
+        left: 400px;
+    }
 }
