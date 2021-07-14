@@ -2,4 +2,6 @@
 https://rick321-debug.github.io/frontendPractice-/
 
 # Pending THA'S
-http://127.0.0.1:5500/THA-10/index.html
+|THA's |Title |Status|
+|--- |--- |--- |
+|THA-10 |Memory Game |src="https://github.githubassets.com/images/icons/emoji/unicode/2705.png"[Visit here](http://127.0.0.1:5500/THA-10/index.html)
