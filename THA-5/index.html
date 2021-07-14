@@ -31,14 +31,13 @@
         <button id="k15" onclick="upScreen(this)">-</button>
         <button id="k16" onclick='result(this)'>.</button>
         <button id="k17" onclick='result(this)'>0</button>
-        <button id="k18" onclick='result()'>=</button>
+        <button id="k18" onclick='equal()'>=</button>
     </div>
 
     <script>
         var screen = document.getElementById('bottom')
         var up = document.getElementById('top')
         function result(e) {
-            // console.log(e.innerHTML)
             screen.value = screen.value + e.innerHTML
         }
         function upScreen(a) {
@@ -60,6 +59,10 @@
         }
         function del(){
             screen.value = screen.value.slice(0,-1)
+        }
+        function equal(){
+            screen.value = eval(up.value +  screen.value) 
+            up.value = ''
         }
     </script>
 </body>
