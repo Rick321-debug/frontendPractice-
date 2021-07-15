@@ -5,23 +5,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Games</title>
+    <title>Memory Game</title>
 </head>
 <body>
-    <h1>MEMORY GAME BY RICK</h1>
-    <div id='wrapper'>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>      
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
-        <div>Click</div>
+    <h1>Memory Game By RICK</h1>
+    <div id='container'>
+        <div class="card">
+            <div class="front">
+               <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/balbasaur.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/balbasaur.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/pikachu.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/pikachu.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/poke.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/poke.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/images.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/images.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/pokemon.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/pokemon.svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/charmainder (1).svg" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h4>Click</h4>
+            </div>
+            <div class="back">
+                <img src="img/charmainder (1).svg" alt="">
+            </div>
+        </div>
     </div>
-    <h1>Cards Left 6</h1>
+<script>
+    var cards = document.querySelectorAll('.card')
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.add('flip')
+            setTimeout( () => {
+                card.classList.remove('flip')
+                
+            },1000)
+        })
+    })
+        
+</script>
+
 </body>
+</html>
