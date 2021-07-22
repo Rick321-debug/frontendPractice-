@@ -10,112 +10,70 @@
 <body>
     <h1>Memory Game By RICK</h1>
     <div id='container'>
-        <div class="card">
-            <div class="front">
-               <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/balbasaur.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/balbasaur.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/pikachu.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/pikachu.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/poke.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/poke.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/images.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/images.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/pokemon.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/pokemon.svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/charmainder (1).svg" alt="">
-            </div>
-        </div>
-        <div class="card">
-            <div class="front">
-                <h4>Click</h4>
-            </div>
-            <div class="back">
-                <img src="img/charmainder (1).svg" alt="">
-            </div>
-        </div>
     </div>
 <script>
+    var pokemon = ['balbasaur','charmainder','images','pikachu','poke','pokemon']
+    var pokemons = [...pokemon,...pokemon]
+    console.log(Math.random()*100)
+    function shuffle(pokemons){
+         var currentIndex = pokemons.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 != currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [pokemons[currentIndex], pokemons[randomIndex]] = [
+      pokemons[randomIndex], pokemons[currentIndex]];
+  }
+
+  return pokemons;
+    }
+pokemons = shuffle(pokemons)
+
+    var container = document.querySelector('#container')
+    pokemons.forEach(element => {
+        let card = document.createElement('div')
+        card.id = element
+        card.classList.add('card')
+        let front = document.createElement('div')
+        front.classList.add('front')
+        let heading = document.createElement('h4')
+        front.appendChild(heading)
+        let back = document.createElement('div')
+        back.classList.add('back')
+        let image = document.createElement('img')
+        image.draggable='false'
+        image.src = `img/${element}.svg`
+        back.appendChild(image)
+        card.append(front,back)
+        container.appendChild(card)
+    });
     var cards = document.querySelectorAll('.card')
+    var identify = ''
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            card.classList.add('flip')
-            setTimeout( () => {
-                card.classList.remove('flip')
-                
-            },1000)
+            if(!card.classList.contains('flip')){
+                card.classList.add('flip')
+                if(identify == ''){
+                    identify=card
+                }
+                else if(identify.id == card.id){
+                    card.style.visibility = 'hidden'
+                    identify.style.visibility = 'hidden'
+                    identify = ''
+                }
+                else{
+                    setTimeout( () => {
+                        card.classList.remove('flip')
+                        identify.classList.remove('flip')
+                        identify = ''
+                    },1000)
+                }
+        }
         })
     })
         
