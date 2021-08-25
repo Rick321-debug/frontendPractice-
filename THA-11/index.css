@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color:grey;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+p{
+    padding: 3px;
+    margin:3px 20px;
+}
+button{
+    background: rgb(2, 124, 2);
+    border: 0;
+    height:35px;
+    border-radius: 5px;
+    margin: 20px;
+    color: white;
+}
+button:hover{
+    background: grey;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+span{
+    color: blue;
+    font-size: xx-large;
+    margin-right: 1em;
+}
+.right{
+    background: yellow;
+}
+.wrong{
+    background: red;
+}
+span{
+    position: absolute;
+    right: 60%;
+}
+@media screen and (max-width:900px) {
+    span{
+        right: 10%;
+    }
+}

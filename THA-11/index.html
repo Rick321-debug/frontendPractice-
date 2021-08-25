@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div 
+    id="wrapper">
+        <h1>Awesome Quiz</h1>
+        <div class="cntainer">
+            <div class="question">
+                
+            </div>
+            <div class="options">
+                
+            </div>
+            <footer>
+                <p>Question 1 of 5</p>
+                <span id='next'><i class="fas fa-arrow-right"></i></span>
+            </footer>
+<script>
+let questions = [{
+    question:'Who was the first president of the United States?',
+    options:['George Washington','Thomas Jefferson','Thomas Edison','I don\'t know'],
+    answer:'George Washington'
+},{
+    question:'What is the name of ben10?',
+    options:['ben10','gwen10','keven11','I don\'t know'],
+    answer:'ben10'
+},{
+    question:'What is the colour of yellow pikachu?',
+    options:['green','black','yellow','I don\'t know'],
+    answer:'yellow'
+}]
+var isClicked = false;
+var CurrQuestion = 0
+var DivQuestion = document.querySelector('.question')
+var DivOptions = document.querySelector('.options')
+var remain = document.querySelector('footer > p')
+const fetchCurrentQuestion=(questions,CurrQuestion) => {
+    console.log(questions[CurrQuestion])
+    remain.innerHTML = 'Question ' + (parseInt(CurrQuestion)+ 1) + ' of ' + questions.length
+    var paragraph = document.createElement('p')
+    paragraph.innerHTML = questions[CurrQuestion].question
+    DivQuestion.appendChild(paragraph)
+    questions[CurrQuestion].options.forEach(element => {
+        let option = document.createElement('div')
+        let paragraph = document.createElement('p')
+        paragraph.innerHTML = element
+        let button = document.createElement('button')
+        button.id = element
+        button.classList.add('option') 
+        button.innerHTML = 'SELECT ANSWER'
+        option.appendChild(paragraph)
+        option.appendChild(button)
+        DivOptions.appendChild(option)
+    });
+    let answers = document.querySelectorAll('.option')
+    answers.forEach(answer => {
+        answer.addEventListener('click' ,() => {
+        if(this.isClicked == false){
+        if(answer.id == questions[CurrQuestion].answer){
+                answer.classList.add('right')
+                this.isClicked = true;
+            }
+            else{
+                answer.classList.add('wrong')
+                this.isClicked = true;
+            }
+        }
+        })
+    })
+    this.CurrQuestion += 1
+    
+}
+fetchCurrentQuestion(questions,CurrQuestion)
+var arrow = document.querySelector('#next')
+arrow.addEventListener('click',() => { 
+    DivQuestion.innerHTML = ''
+    this.isClicked = false;
+    DivOptions.innerHTML = ''
+    fetchCurrentQuestion(questions,CurrQuestion)
+})
+
+
+
+</script>
+</body>
+</html> 
