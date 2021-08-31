@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(90deg,red,rgb(36, 131, 240));
+}
+.strike{
+    text-decoration: line-through;
+}
+#boxs{
+    border: 2px solid black;
+    border-bottom: none;
+}
+.card-body{
+    border:2px solid black;
+    border-bottom: none;
+    border-top: none;
+}
+/* #container{
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+} */
+.borders{
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+}

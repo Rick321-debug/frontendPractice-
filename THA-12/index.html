@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+<body onload="loadToDo()">
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-primary text-white"id='boxs'>TODO-LIST
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="card-body">
+                <input  id="list" type="text"class="form-control" placeholder="ADD TO-DO LIST">
+            </div>
+          </div>
+        
+    </div>
+    <div class="container" id="container">
+
+    </div>
+<script>
+    var lists = document.querySelector('#list')
+    var box = document.querySelector('#container')
+    lists.addEventListener('keydown',(e) => {
+        if(e.code == "Enter"){
+          let a = document.createElement('div')
+          let b = document.createElement('span')
+          let c = document.createElement('span')
+          b.classList.add('fas')
+          b.classList.add('fa-trash')
+          b.classList.add('text-danger')
+          a.append(b)
+          c.innerHTML = lists.value
+          c.classList.add('ml-2')
+          c.classList.add('list-text')
+          a.append(c)
+          a.classList.add('bg-white')
+          a.classList.add('borders')
+          a.classList.add('p-2')
+          a.classList.add('delete')
+          a.classList.add('ml-2')
+          box.append(a)
+          lists.value = ''
+          // storage in browser
+          localStorage.setItem('To-dos',box.innerHTML)   
+         //delete
+          var trashes = document.querySelectorAll('.fa-trash')
+        trashes.forEach( trash => {
+            trash.addEventListener('click', () => {
+                // alert('deleted')
+                trash.classList.remove('text-danger')
+                trash.classList.add('text-primary')
+                trash.parentElement.remove()
+                localStorage.setItem('To-dos',box.innerHTML)   
+            })
+        })
+        var text = document.querySelectorAll('.list-text')
+        text.forEach(span => {
+            span.addEventListener('click',() => {
+                span.classList.toggle('strike')
+                localStorage.setItem('To-dos',box.innerHTML)   
+            })
+        })
+    }
+
+    })
+    function loadToDo(){
+        let toDoItems = localStorage.getItem('To-dos')
+        box.innerHTML = toDoItems
+    }
+    </script>
+</body>
+</html>
