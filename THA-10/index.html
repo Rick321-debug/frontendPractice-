@@ -16,27 +16,29 @@
     var pokemons = [...pokemon,...pokemon]
     console.log(Math.random()*100)
     function shuffle(pokemons){
-         var currentIndex = pokemons.length,  randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 != currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [pokemons[currentIndex], pokemons[randomIndex]] = [
-      pokemons[randomIndex], pokemons[currentIndex]];
+        alert("WARNING: IF GAME IS ENDED REFRESH THE PAGE TO PLAY AGAIN")
+        var currentIndex = pokemons.length,  randomIndex;
+        
+        // While there remain elements to shuffle...
+        while (0 != currentIndex) {
+            
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            
+            // And swap it with the current element.
+            [pokemons[currentIndex], pokemons[randomIndex]] = [
+                pokemons[randomIndex], pokemons[currentIndex]];
+               
   }
 
   return pokemons;
-    }
+}
 pokemons = shuffle(pokemons)
 
-    var container = document.querySelector('#container')
-    pokemons.forEach(element => {
-        let card = document.createElement('div')
+var container = document.querySelector('#container')
+pokemons.forEach(element => {
+    let card = document.createElement('div')
         card.id = element
         card.classList.add('card')
         let front = document.createElement('div')
@@ -73,7 +75,7 @@ pokemons = shuffle(pokemons)
                         identify = ''
                     },1000)
                 }
-        }
+            }
         })
     })
         

@@ -1,0 +1,21 @@
+body{
+    background: linear-gradient(90deg, yellow,green);
+}
+img{
+    height:500px;
+}
+.btn:hover{
+    background: grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid black;
+}
+.card{
+    width: 500px;
+    display: flex;
+
+    margin: 0 auto;
+
+}
+@media screen and (max-width:700px){
+
+}

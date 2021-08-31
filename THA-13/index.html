@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEME PAGE WITH API</title>
+</head>
+<body class="container">
+    <div class="card">
+        <h1 class="text-center bg-warning py-2">MEME PAGE</h1>
+    </div>
+    <div class="card">
+        <img id="meme-box">
+    </div>
+    <div class="card">
+        <span class="bg-primary btn text-white">NEXT MEME</span>
+    </div>
+<script>
+var next = document.querySelector('.btn')
+var box = document.querySelector('#meme-box')
+next.addEventListener('click',() => {
+    fetch('https://meme-api.herokuapp.com/gimme/1?nsfw=false')
+    .then(response => response.json())
+    .then(memes => {
+       var meme = memes.memes
+       meme.forEach(item => {
+           memer(item)
+       });
+    })
+})
+
+function memer(meme){
+    box.src = meme.preview[meme.preview.length-1]
+
+}
+
+</script>
+</body>
+</html>
