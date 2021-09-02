@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT-BOX</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="icons">
+                <i class="fas fa-bold"></i>
+                <i class=" fas fa-italic"></i>
+                <i class=" fas fa-underline"></i>
+                <i class=" fas fa-code"></i>
+                <i class=" fas fa-list-ol"></i>
+                <i class=" fas fa-list-ul"></i>
+            </div>
+            <textarea></textarea> 
+            <div class="tri">
+                
+            </div>
+            <div class="post">
+                <i class="fas fa-paperclip"></i>
+                <button class="submit">POST</button>
+            </div>
+        </div>
+        <div class="btn">
+            <button>5</button>
+        </div>
+    </div>
+<script>
+    var button = document.querySelector('.btn')
+    var box = document.querySelector('.box')
+    button.addEventListener('click',() => {
+        box.classList.toggle('hide')
+    })
+</script>
+</body>
+</html>
