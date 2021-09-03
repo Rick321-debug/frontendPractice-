@@ -1,7 +1,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(90deg , green,yellow);
+    background: linear-gradient(90deg ,rgba(131,58,180,1), rgba(253,29,29,1) 50%, rgb(252, 151, 69));
     display: flex;
     justify-content: center;
     align-items: center;
